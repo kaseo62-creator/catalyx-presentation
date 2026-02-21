@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalyx Systems - Strategic Overview</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #0a1628;
+            color: #e8eaed;
+            overflow: hidden;
+        }
+
+        .presentation-wrapper {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0a1628 0%, #1a2845 100%);
+        }
+
+        .slide-container {
+            display: none;
+            width: 90%;
+            max-width: 1400px;
+            height: 86vh;
+            background: linear-gradient(135deg, #0f1419 0%, #1e2938 100%);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            border-radius: 16px;
+            padding: 65px 85px;
+            animation: slideEnter 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.6);
+        }
+
+        .slide-container.active {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @keyframes slideEnter {
+            from {
+                opacity: 0;
+                transform: translateY(20px) scale(0.98);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3.5em;
+            font-weight: 600;
+            margin-bottom: 18px;
+            color: #ffffff;
+            letter-spacing: -1.5px;
+            background: linear-gradient(135deg, #00d4ff 0%, #0066ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.6em;
+            font-weight: 500;
+            margin-bottom: 35px;
+            color: #ffffff;
+            letter-spacing: -0.8px;
+        }
+
+        h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.65em;
+            font-weight: 500;
+            margin-bottom: 20px;
+            color: #00d4ff;
+            letter-spacing: -0.3px;
+        }
+
+        .subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.45em;
+            color: #7a8899;
+            margin-bottom: 18px;
+            font-weight: 400;
+            line-height: 1.6;
+            letter-spacing: -0.2px;
+        }
+
+        .slide-content {
+            flex: 1;
+            overflow-y: auto;
+            padding-right: 15px;
+        }
+
+        .slide-content::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .slide-content::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 4px;
+        }
+
+        .slide-content::-webkit-scrollbar-thumb {
+            background: rgba(0, 212, 255, 0.35);
+            border-radius: 4px;
+        }
+
+        .slide-content::-webkit-scrollbar-thumb:hover {
+            background: rgba(0, 212, 255, 0.5);
+        }
+
+        .flow-diagram {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            margin: 60px 0;
+        }
+
+        .flow-box {
+            background: rgba(0, 212, 255, 0.08);
+            border: 2px solid rgba(0, 212, 255, 0.3);
+            padding: 40px 50px;
+            border-radius: 12px;
+            text-align: center;
+            min-width: 280px;
+        }
+
+        .flow-label {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.4em;
+            font-weight: 500;
+            color: #00d4ff;
+            margin-bottom: 12px;
+        }
+
+        .flow-desc {
+            font-size: 1.05em;
+            color: #a8b5c7;
+            line-height: 1.6;
+        }
+
+        .flow-arrow {
+            font-size: 3em;
+            color: #00d4ff;
+        }
+
+        .insight-box {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.08) 0%, rgba(0, 102, 255, 0.08) 100%);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            padding: 38px 42px;
+            margin: 35px 0;
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .insight-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(180deg, #00d4ff 0%, #0066ff 100%);
+        }
+
+        .key-point {
+            font-size: 1.25em;
+            line-height: 1.75;
+            margin-bottom: 18px;
+            color: #c8d0db;
+            font-weight: 400;
+        }
+
+        .emphasis {
+            color: #00d4ff;
+            font-weight: 500;
+        }
+
+        .warning {
+            color: #ff6464;
+            font-weight: 500;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin: 35px 0;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            margin: 35px 0;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(0, 212, 255, 0.25);
+            padding: 32px;
+            border-radius: 12px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+
+        .card:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(0, 212, 255, 0.5);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 28px rgba(0, 212, 255, 0.15);
+        }
+
+        .card h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.3em;
+            font-weight: 500;
+            margin-bottom: 16px;
+            color: #ffffff;
+            letter-spacing: -0.3px;
+        }
+
+        .card p {
+            color: #a8b5c7;
+            line-height: 1.7;
+            font-size: 1.05em;
+        }
+
+        .process-flow {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin: 35px 0;
+            padding: 35px;
+            background: rgba(0, 0, 0, 0.25);
+            border-radius: 12px;
+            border: 1px solid rgba(0, 212, 255, 0.15);
+            flex-wrap: wrap;
+        }
+
+        .process-step {
+            padding: 18px 28px;
+            background: rgba(255, 100, 100, 0.12);
+            border: 1px solid rgba(255, 100, 100, 0.35);
+            border-radius: 8px;
+            font-size: 1.05em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .process-step:hover {
+            background: rgba(255, 100, 100, 0.22);
+            transform: scale(1.04);
+            box-shadow: 0 6px 16px rgba(255, 100, 100, 0.25);
+        }
+
+        .process-step.auto {
+            background: rgba(100, 255, 150, 0.12);
+            border-color: rgba(100, 255, 150, 0.35);
+        }
+
+        .process-step.auto:hover {
+            background: rgba(100, 255, 150, 0.22);
+            box-shadow: 0 6px 16px rgba(100, 255, 150, 0.25);
+        }
+
+        .arrow {
+            color: #7a8899;
+            font-size: 1.5em;
+            font-weight: 300;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+            margin: 38px 0;
+        }
+
+        .comparison-card {
+            padding: 35px;
+            border-radius: 12px;
+            border: 2px solid;
+        }
+
+        .comparison-card.before {
+            background: rgba(255, 100, 100, 0.06);
+            border-color: rgba(255, 100, 100, 0.4);
+        }
+
+        .comparison-card.after {
+            background: rgba(100, 255, 150, 0.06);
+            border-color: rgba(100, 255, 150, 0.4);
+        }
+
+        .comparison-card h3 {
+            margin-top: 0;
+        }
+
+        .comparison-card.before h3 {
+            color: #ff6464;
+        }
+
+        .comparison-card.after h3 {
+            color: #64ff96;
+        }
+
+        .risk-item {
+            padding: 24px 32px;
+            margin: 16px 0;
+            background: rgba(255, 200, 100, 0.08);
+            border-left: 4px solid #ffc864;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .risk-item:hover {
+            background: rgba(255, 200, 100, 0.14);
+            transform: translateX(6px);
+        }
+
+        .risk-title {
+            font-size: 1.2em;
+            font-weight: 500;
+            color: #ffc864;
+            margin-bottom: 10px;
+        }
+
+        .risk-desc {
+            color: #c8d0db;
+            line-height: 1.7;
+        }
+
+        .pillar-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
+            margin: 35px 0;
+        }
+
+        .pillar-card {
+            background: rgba(0, 212, 255, 0.05);
+            border: 1px solid rgba(0, 212, 255, 0.25);
+            padding: 28px;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .pillar-card:hover {
+            background: rgba(0, 212, 255, 0.1);
+            border-color: rgba(0, 212, 255, 0.5);
+            transform: translateY(-3px);
+        }
+
+        .pillar-label {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.15em;
+            font-weight: 500;
+            color: #ffffff;
+            margin-top: 12px;
+        }
+
+        .question-block {
+            background: rgba(0, 212, 255, 0.08);
+            border: 1px solid rgba(0, 212, 255, 0.35);
+            padding: 24px 32px;
+            margin: 18px 0;
+            border-radius: 10px;
+            font-size: 1.2em;
+            color: #00d4ff;
+            transition: all 0.3s ease;
+        }
+
+        .question-block:hover {
+            background: rgba(0, 212, 255, 0.14);
+            border-color: rgba(0, 212, 255, 0.5);
+            transform: translateX(8px);
+        }
+
+        .callout {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.12), rgba(0, 102, 255, 0.12));
+            border: 2px solid rgba(0, 212, 255, 0.45);
+            padding: 32px 40px;
+            margin: 35px 0;
+            border-radius: 12px;
+            font-size: 1.3em;
+            font-weight: 400;
+            text-align: center;
+            color: #ffffff;
+            line-height: 1.7;
+        }
+
+        .slide-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 35px;
+            padding-top: 25px;
+            border-top: 1px solid rgba(0, 212, 255, 0.2);
+        }
+
+        .nav-btn {
+            padding: 15px 38px;
+            background: rgba(0, 212, 255, 0.15);
+            border: 1px solid rgba(0, 212, 255, 0.45);
+            color: #ffffff;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.05em;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            letter-spacing: 0.3px;
+        }
+
+        .nav-btn:hover:not(:disabled) {
+            background: rgba(0, 212, 255, 0.28);
+            border-color: rgba(0, 212, 255, 0.65);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(0, 212, 255, 0.25);
+        }
+
+        .nav-btn:disabled {
+            opacity: 0.2;
+            cursor: not-allowed;
+        }
+
+        .slide-num {
+            font-family: 'Space Grotesk', sans-serif;
+            color: #7a8899;
+            font-size: 1em;
+            font-weight: 500;
+        }
+
+        ul {
+            margin: 18px 0;
+            padding-left: 32px;
+        }
+
+        li {
+            margin: 14px 0;
+            color: #c8d0db;
+            line-height: 1.7;
+            font-size: 1.08em;
+        }
+
+        strong {
+            color: #00d4ff;
+            font-weight: 500;
+        }
+
+        @media (max-width: 1200px) {
+            .slide-container {
+                padding: 50px 65px;
+            }
+
+            h1 {
+                font-size: 2.8em;
+            }
+
+            h2 {
+                font-size: 2.2em;
+            }
+
+            .comparison-grid, .grid-2 {
+                grid-template-columns: 1fr;
+            }
+
+            .flow-diagram {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-wrapper">
+        
+        <!-- SLIDE 1: Title -->
+        <div class="slide-container active" data-slide="1">
+            <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%;">
+                <h1 style="margin-bottom: 25px;">Catalyx Systems</h1>
+                <div class="subtitle" style="text-align: center; max-width: 800px;">Operational Automation for Multi-Unit Businesses</div>
+            </div>
+            <div class="slide-nav">
+                <button class="nav-btn" onclick="prevSlide()" disabled>Previous</button>
+                <span class="slide-num">1 / 14</span>
+                <button class="nav-btn" onclick="nextSlide()">Next</button>
+            </div>
+        </div>
+
+        <!-- SLIDE 2: What Catalyx Systems Is -->
+        <div class="slide-container" data-slide="2">
+            <h2>What Catalyx Systems Is</h2>
+            <div class="slide-content">
+                <div class="flow-diagram">
+                    <div class="flow-box">
+                        <div class="flow-label">Multi-Location Business</div>
+                        <div class="flow-desc">Manual processes across multiple locations</div>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-box">
+                        <div class="flow-label">Catalyx Automation</div>
+                        <div class="flow-desc">AI-powered workflow systems</div>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-box">
+                        <div class="flow-label">Results</div>
+                        <div class="flow-desc">Reduced manual work + Better visibility</div>
+                    </div>
+                </div>
+
+                <div class="callout" style="margin-top: 60px;">
+                    Catalyx Systems designs and implements automation infrastructure for multi-location operators to reduce manual workload and improve operational visibility.
+                </div>
+            </div>
+            <div class="slide-nav">
+                <button class="nav-btn" onclick="prevSlide()">Previous</button>
+                <span class="slide-num">2 / 14</span>
+                <button class="nav-btn" onclick="nextSlide()">Next</button>
+            </div>
+        </div>
+
+        <!-- SLIDE 3: Context -->
+        <div class="slide-container" data-slide="3">
+            <h2>Context</h2>
+            <div class="slide-content">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 60px;">
+                    <div style="background: linear-gradient(135deg, rgba(0, 212, 255, 0.08), rgba(0, 102, 255, 0.08)); border: 2px solid rgba(0, 212, 255, 0.3); border-radius: 12px; padding: 50px; display: flex; flex-direction: column; justify-content: center;">
+                        <p style="font-size: 1.3em; line-height: 1.7; color: #c8d0db; text-align: center;">I've been building automation systems on my own time because I'm interested in how operations scale.</p>
+                    </div>
+                    <div style="background: linear-gradient(135deg, rgba(0, 212, 255, 0.08), rgba(0, 102, 255, 0.08)); border: 2px solid rgba(0, 212, 255, 0.3); border-radius: 12px; padding: 50px; display: flex; flex-direction: column; justify-content: center;">
+                        <p style="font-size: 1.3em; line-height: 1.7; color: #c8d0db; text-align: center;">I want feedback from someone who actually runs a successful business.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-nav">
+                <button class="nav-btn" onclick="prevSlide()">Previous</button>
+                <span class="slide-num">3 / 14</span>
+                <button class="nav-btn" onclick="nextSlide()">Next</button>
+            </div>
+        </div>
+
+        <!-- SLIDE 4: The Core Insight -->
+        <div class="slide-container" data-slide="4">
+            <h2>Operational Complexity Increases With Scale</h2>
+            <div class="slide-content">
+                <div class="grid-2" style="margin-top: 40px;">
+                    <div class="card">
+                        <h4>More Locations = More Data</h4>
+                        <p>Each additional store doesn't just add data. It multiplies coordination points. 10 locations isn't 10× the data. It's closer to 30-50× the overhead.</p>
+                    </div>
+                    <div class="card">
+                        <h4>More People = More Variability</h4>
+                        <p>Every person interprets procedures differently. What's standardized on paper becomes fragmented in practice across teams.</p>
+                    </div>
+                    <div class="card">
+                        <h4>More Manual Steps = More Errors</h4>
+                        <p>Each manual step is a failure point. Data entry, approvals, reconciliation. Every human touch introduces mistakes.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Visibility Gets Worse, Not Better</h4>
+                        <p>When data lives in spreadsheets, emails, and disconnected systems, you're making decisions on incomplete or week-old information.</p>
+                    </div>
+                </div>
+
+                <div class="callout" style="margin-top: 45px;">
+                    More locations doesn't mean 2× the work. It's more like 10× the headaches.
+                </div>
+            </div>
+            <div class="slide-nav">
+                <button class="nav-btn" onclick="prevSlide()">Previous</button>
+                <span class="slide-num">4 / 14</span>
+                <button class="nav-btn" onclick="nextSlide()">Next</button>
+            </div>
+        </div>
+
+        <!-- SLIDE 5: Why Start With Financial Operations -->
+        <div class="slide-container" data-slide="5">
+            <h2>Why Start With Financial Operations</h2>
+            <div class="slide-content">
+                <p style="font-size: 1.15em; margin-bottom: 35px; color: #c8d0db;">I'm intentionally starting here before expanding to other operational areas.</p>
+                
+                <div class="grid-2">
+                    <div class="card">
+                        <h4>Measurable ROI</h4>
+                        <p>Time saved translates directly to cost saved. Hours per week × hourly rate = clear annual savings. Finance automation has an obvious payback period.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Clear Time Savings</h4>
+                        <p>Invoice processing, expense tracking, report generation. These are quantifiable. You can measure 25 hours/week before and 3 hours/week after.</p>
+                    </div>
+                </div>
+
+                <div class="insight-box" style="margin-top: 45px;">
+                    <div class="key-point">
+                        Financial operations is the entry point because it's the most defensible, measurable place to start. Once proven there, expanding to sales, marketing, and fulfillment becomes a natural progression.
+                    </div>
+                </div>
+            </div>
+            <div class="slide-nav">
+                <button class="nav-btn" onclick="prevSlide()">Previous</button>
+                <span class="slide-num">5 / 14</span>
+                <button class="nav-btn" onclick="nextSlide()">Next</button>
+            </div>
+        </div>
+
+        <!-- SLIDE 6: What I've Built So Far -->
+        <div class="slide-container" data-slide="6">
+            <h2>What I've Built So Far</h2>
+            <div class="slide-content">
+                <div class="grid-3" style="margin-top: 35px;">
+                    <div class="card">
+                        <h4>Team Member Evaluation Report</h4>
+                        <p>Reads employee data, analyzes performance metrics, generates report with letter grades, and creates personalized email communications. Built for Allison.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Financial Intelligence Report</h4>
+                        <p>Mock demo system showing automated financial analysis. Pulls business data, processes monthly financials, generates AI-driven insights. Proof of concept shown to Billy.</p>
+                    </div>
+                    <div class="card">
+                        <h4>BOH Shift Grading System</h4>
+                        <p>Back of house shift performance reports. Analyzes shift leader execution, generates performance grades, automates feedback delivery. Built for Hector.</p>
+                    </div>
+                </div>
+
+                <div class="insight-box" style="margin-top: 40px;">
+                    <div class="key-point">
+                        <span class="emphasis">What I learned:</span> AI accuracy improves with validation rules. The hardest part isn't the automation. It's understanding the business logic behind each process. Exception handling matters more than I initially thought.
+                    </div>
+                </div>
+            </div>
+            <div class="slide-nav">
+                <button class="nav-btn" onclick="prevSlide()">Previous</button>
+                <span class="slide-num">6 / 14</span>
+                <button class="nav-btn" onclick="nextSlide()">Next</button>
+            </div>
+        </div>
+
+        <!-- SLIDE 7: How Catalyx Works -->
+        <div class="slide-container" data-slide="7">
+            <h2>How Catalyx Systems Works</h2>
+            <div class="slide-content">
+                <div style="margin-top: 40px;">
+                    <div class="card" style="margin-bottom: 20px;">
+                        <h4>Step 1: Operational Audit</h4>
+                        <p>Map current processes, identify bottlenecks, quantify time waste and costs.</p>
+                    </div>
+                    <div class="card" style="margin-bottom: 20px;">
+                        <h4>Step 2: Bottleneck Identification</h4>
+                        <p>Pinpoint where manual work creates the most friction, errors, and delays.</p>
+                    </div>
+                    <div class="card" style="margin-bottom: 20px;">
+                        <h4>Step 3: System Architecture Design</h4>
+                        <p>Design automation workflow with validation rules, exception handling, and integration points.</p>
+                    </div>
+                    <div class="card" style="margin-bottom: 20px;">
+                        <h4>Step 4: Controlled Implementation</h4>
+                        <p>Build in test environment, run parallel with manual process, validate accuracy before go-live.</p>
+                    </div>
+                    <div class="card" style="margin-bottom: 20px;">
+                        <h4>Step 5: Monitoring & Optimization</h4>
+                        <p>Track performance, review exceptions, refine rules, expand functionality.</p>
+                    </div>
+                </div>
+
+                <div class="callout" style="margin-top: 40px;">
+                    This is not "build automation and leave." It is structured systems design with validation and iteration.
+                </div>
+            </div>
+            <div class="slide-nav">
+                <button class="nav-btn" onclick="prevSlide()">Previous</button>
+                <span class="slide-num">7 / 14</span>
+                <button class="nav-btn" onclick="nextSlide()">Next</button>
+            </div>
+        </div>
+
+        <!-- SLIDE 8: The Audit Framework -->
+        <div class="slide-container" data-slide="8">
+            <h2>The Operational Audit Framework</h2>
+            <div class="slide-content">
+                <div style="margin-top: 35px;">
+                    <div class="card" style="margin-bottom: 18px;">
+                        <h4>1. Process Mapping</h4>
+                        <p>What are the current steps? Who touches it? Where does data live? How many manual inputs? What tools are used?</p>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 18px;">
+                        <h4>2. Time & Cost Quantification</h4>
+                        <p>How long per transaction? Volume per week/month? Fully loaded labor cost? Annual cost of current process?</p>
+                        <p style="margin-top: 10px; color: #00d4ff; font-weight: 500;">Example: 150 invoices × 15 min × $22/hr = $21,450/year</p>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 18px;">
+                        <h4>3. Risk & Error Identification</h4>
+                        <p>Duplicate entry risk, approval delays, filing inconsistencies, lost documentation, reconciliation lag.</p>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 18px;">
+                        <h4>4. Automation Viability Analysis</h4>
+                        <p>Can this be rule-based? Does it require judgment? Is AI needed or pure logic? Exception rate estimate? Integration constraints?</p>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 18px;">
+                        <h4>5. ROI Model</h4>
+                        <p>Time saved, error reduction, visibility gain, payback period.</p>
+                        <p style="margin-top: 10px; color: #64ff96; font-weight: 500;">Example: $21,450 cost → reduce to $4,000. Payback period: 3-4 months</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-nav">
+                <button class="nav-btn" onclick="prevSlide()">Previous</button>
+                <span class="slide-num">8 / 14</span>
+                <button class="nav-btn" onclick="nextSlide()">Next</button>
+            </div>
+        </div>
+
+        <!-- SLIDE 9: Implementation & Control Systems -->
+        <div class="slide-container" data-slide="9">
+            <h2>Controlled Implementation Model</h2>
+            <div class="slide-content">
+                <p style="font-size: 1.15em; margin-bottom: 30px; color: #c8d0db;">How I prevent AI errors and maintain control.</p>
+
+                <div class="grid-2" style="margin-top: 35px;">
+                    <div class="card">
+                        <h4>Phase 1: Sandbox Build</h4>
+                        <p>Built in test environment. No live data affected. Simulated invoice testing with sample data.</p>
+                    </div>
+
+                    <div class="card">
+                        <h4>Phase 2: Parallel Run</h4>
+                        <p>Automation runs in background. Human still processes manually. Compare results. Accuracy benchmark required (95%+).</p>
+                    </div>
+
+                    <div class="card">
+                        <h4>Phase 3: Controlled Go-Live</h4>
+                        <p>Low-risk subset of transactions. Approval thresholds active. Manual override always available.</p>
+                    </div>
+
+                    <div class="card">
+                        <h4>Phase 4: Monitoring & Exception Handling</h4>
+                        <p>Weekly review dashboard. Exception log. Continuous rule refinement. Human oversight retained.</p>
+                    </div>
+                </div>
+
+                <div class="callout" style="margin-top: 40px; background: rgba(100, 255, 150, 0.1); border-color: rgba(100, 255, 150, 0.4);">
+                    Automation reduces workload. It does not remove human control.
+                </div>
+            </div>
+            <div class="slide-nav">
+                <button class="nav-btn" onclick="prevSlide()">Previous</button>
+                <span class="slide-num">9 / 14</span>
+                <button class="nav-btn" onclick="nextSlide()">Next</button>
+            </div>
+        </div>
+
+        <!-- SLIDE 10: Example Use Case -->
+        <div class="slide-container" data-slide="10">
+            <h2>Example Use Case: Invoice Processing</h2>
+            <div class="slide-content">
+                <div class="comparison-grid">
+                    <div class="comparison-card before">
+                        <h3>Current State: Manual Process</h3>
+                        <div class="process-flow" style="flex-direction: column; align-items: flex-start; padding: 25px; gap: 12px;">
+                            <div class="process-step" style="width: 100%;">Email arrives with invoice PDF</div>
+                            <div class="arrow" style="transform: rotate(90deg); margin: -8px 0;">→</div>
+                            <div class="process-step" style="width: 100%;">Finance person downloads, manually enters data into Excel</div>
+                            <div class="arrow" style="transform: rotate(90deg); margin: -8px 0;">→</div>
+                            <div class="process-step" style="width: 100%;">Same data re-entered into QuickBooks</div>
+                            <div class="arrow" style="transform: rotate(90deg); margin: -8px 0;">→</div>
+                            <div class="process-step" style="width: 100%;">Manual filing to Google Drive</div>
+                            <div class="arrow" style="transform: rotate(90deg); margin: -8px 0;">→</div>
+                            <div class="process-step" style="width: 100%;">Weekly manual report creation</div>
+                        </div>
+                        <p style="margin-top: 20px; color: #ff6464; font-weight: 500;">150 invoices/week × 15 min each = 37.5 hours/week</p>
+                    </div>
+
+                    <div class="comparison-card after">
+                        <h3>Future State: Automated Workflow</h3>
+                        <div class="process-flow" style="flex-direction: column; align-items: flex-start; padding: 25px; gap: 12px;">
+                            <div class="process-step auto" style="width: 100%;">AI monitors inbox, detects invoice</div>
+                            <div class="arrow" style="transform: rotate(90deg); margin: -8px 0;">→</div>
+                            <div class="process-step auto" style="width: 100%;">AI extracts all data from PDF</div>
+                            <div class="arrow" style="transform: rotate(90deg); margin: -8px 0;">→</div>
+                            <div class="process-step auto" style="width: 100%;">Data syncs to Excel and QuickBooks</div>
+                            <div class="arrow" style="transform: rotate(90deg); margin: -8px 0;">→</div>
+                            <div class="process-step auto" style="width: 100%;">PDF auto-filed, dashboard updated</div>
+                            <div class="arrow" style="transform: rotate(90deg); margin: -8px 0;">→</div>
+                            <div class="process-step auto" style="width: 100%;">Real-time reporting</div>
+                        </div>
+                        <p style="margin-top: 20px; color: #64ff96; font-weight: 500;">Reduces manual work significantly</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-nav">
+                <button class="nav-btn" onclick="prevSlide()">Previous</button>
+                <span class="slide-num">10 / 14</span>
+                <button class="nav-btn" onclick="nextSlide()">Next</button>
+            </div>
+        </div>
+
+        <!-- SLIDE 11: What Could Break This -->
+        <div class="slide-container" data-slide="11">
+            <h2>What Could Break This?</h2>
+            <div class="slide-content">
+                <p style="font-size: 1.15em; margin-bottom: 35px; color: #c8d0db;">I'd want to understand where you see the biggest resistance.</p>
+                
+                <div class="risk-item">
+                    <div class="risk-title">Adoption Resistance</div>
+                    <div class="risk-desc">Staff might not trust the system. "I've always done it this way" is powerful inertia. If the finance manager doesn't believe in it, it won't work.</div>
+                </div>
+
+                <div class="risk-item">
+                    <div class="risk-title">Data Integrity Concerns</div>
+                    <div class="risk-desc">What if the AI misreads an invoice? What if it files something to the wrong location? Trust in automated systems takes time to build.</div>
+                </div>
+
+                <div class="risk-item">
+                    <div class="risk-title">Corporate Tool Restrictions</div>
+                    <div class="risk-desc">Some franchises have corporate-mandated systems. IT policies might block external automation tools. Integration approval could take months.</div>
+                </div>
+
+                <div class="risk-item">
+                    <div class="risk-title">Change Fatigue</div>
+                    <div class="risk-desc">Operators deal with constant "improvements" that don't stick. Another new system might feel like more disruption than it's worth.</div>
+                </div>
+
+                <div class="callout" style="margin-top: 40px; background: rgba(255, 200, 100, 0.12); border-color: rgba(255, 200, 100, 0.45);">
+                    Which one would concern you most?
+                </div>
+            </div>
+            <div class="slide-nav">
+                <button class="nav-btn" onclick="prevSlide()">Previous</button>
+                <span class="slide-num">11 / 14</span>
+                <button class="nav-btn" onclick="nextSlide()">Next</button>
+            </div>
+        </div>
+
+        <!-- SLIDE 12: Long-Term Vision -->
+        <div class="slide-container" data-slide="12">
+            <h2>Long-Term Direction</h2>
+            <div class="slide-content">
+                <p style="font-size: 1.15em; margin-bottom: 35px; color: #c8d0db;">Financial operations is the entry point. The broader goal is operational intelligence across all core functions.</p>
+                
+                <div class="pillar-grid">
+                    <div class="pillar-card">
+                        <div style="font-size: 2.5em; margin-bottom: 12px;">01</div>
+                        <div class="pillar-label">Financial Operations</div>
+                        <p style="margin-top: 12px; font-size: 0.95em; color: #a8b5c7;">Invoice automation, expense tracking, financial reporting</p>
+                    </div>
+                    <div class="pillar-card">
+                        <div style="font-size: 2.5em; margin-bottom: 12px;">02</div>
+                        <div class="pillar-label">Sales Operations</div>
+                        <p style="margin-top: 12px; font-size: 0.95em; color: #a8b5c7;">POS integration, sales analytics, performance tracking</p>
+                    </div>
+                    <div class="pillar-card">
+                        <div style="font-size: 2.5em; margin-bottom: 12px;">03</div>
+                        <div class="pillar-label">Marketing Operations</div>
+                        <p style="margin-top: 12px; font-size: 0.95em; color: #a8b5c7;">Campaign tracking, ROI measurement, customer data</p>
+                    </div>
+                    <div class="pillar-card">
+                        <div style="font-size: 2.5em; margin-bottom: 12px;">04</div>
+                        <div class="pillar-label">Fulfillment Operations</div>
+                        <p style="margin-top: 12px; font-size: 0.95em; color: #a8b5c7;">Inventory management, waste tracking, supply chain</p>
+                    </div>
+                    <div class="pillar-card">
+                        <div style="font-size: 2.5em; margin-bottom: 12px;">05</div>
+                        <div class="pillar-label">Administrative Operations</div>
+                        <p style="margin-top: 12px; font-size: 0.95em; color: #a8b5c7;">HR automation, compliance, document management</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-nav">
+                <button class="nav-btn" onclick="prevSlide()">Previous</button>
+                <span class="slide-num">12 / 14</span>
+                <button class="nav-btn" onclick="nextSlide()">Next</button>
+            </div>
+        </div>
+
+        <!-- SLIDE 13: What I Need To Validate -->
+        <div class="slide-container" data-slide="13">
+            <h2>What I'm Trying To Pressure-Test</h2>
+            <div class="slide-content">
+                <div style="margin-top: 50px;">
+                    <div class="question-block">
+                        Is this a real operator pain point, or am I solving a problem that doesn't matter?
+                    </div>
+
+                    <div class="question-block">
+                        Would this be perceived as a cost or an investment?
+                    </div>
+
+                    <div class="question-block">
+                        What would make you skeptical about something like this?
+                    </div>
+
+                    <div class="question-block">
+                        Where would adoption fail? What's the human resistance point?
+                    </div>
+
+                    <div class="question-block">
+                        What would realistic pricing look like for this kind of solution?
+                    </div>
+                </div>
+            </div>
+            <div class="slide-nav">
+                <button class="nav-btn" onclick="prevSlide()">Previous</button>
+                <span class="slide-num">13 / 14</span>
+                <button class="nav-btn" onclick="nextSlide()">Next</button>
+            </div>
+        </div>
+
+        <!-- SLIDE 14: The Ask -->
+        <div class="slide-container" data-slide="14">
+            <h2>If You Were Me</h2>
+            <div class="slide-content">
+                <div style="margin-top: 50px;">
+                    <div class="question-block">
+                        1. What would you refine about this approach?
+                    </div>
+
+                    <div class="question-block">
+                        2. What would you challenge or push back on?
+                    </div>
+
+                    <div class="question-block">
+                        3. What investment range would feel rational for something like this?
+                    </div>
+
+                    <div class="question-block">
+                        4. Who would you talk to next if you were building this?
+                    </div>
+                </div>
+            </div>
+            <div class="slide-nav">
+                <button class="nav-btn" onclick="prevSlide()">Previous</button>
+                <span class="slide-num">14 / 14</span>
+                <button class="nav-btn" onclick="nextSlide()" disabled>Next</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 14;
+
+        function showSlide(n) {
+            const slides = document.querySelectorAll('.slide-container');
+            slides.forEach(slide => slide.classList.remove('active'));
+            
+            const targetSlide = document.querySelector(`.slide-container[data-slide="${n}"]`);
+            if (targetSlide) {
+                targetSlide.classList.add('active');
+                currentSlide = n;
+            }
+
+            updateNav();
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides) {
+                showSlide(currentSlide + 1);
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 1) {
+                showSlide(currentSlide - 1);
+            }
+        }
+
+        function updateNav() {
+            const prevBtns = document.querySelectorAll('.nav-btn:first-child');
+            const nextBtns = document.querySelectorAll('.nav-btn:last-child');
+            
+            prevBtns.forEach(btn => {
+                btn.disabled = currentSlide === 1;
+            });
+            
+            nextBtns.forEach(btn => {
+                btn.disabled = currentSlide === totalSlides;
+            });
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                e.preventDefault();
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                prevSlide();
+            }
+        });
+
+        updateNav();
+    </script>
+</body>
+</html>
